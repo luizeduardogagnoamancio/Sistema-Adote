@@ -51,13 +51,14 @@ form {
 }
 
 
-form button {
-    font-family: 'Roboto Slab';
+form a {
+    text-decoration: none;
+    font-family: 'Lobster';
     margin-top: 40px;
     width: 50%;
     font-size: 20px;
     padding: 10px 40px 10px 40px;
-    
+    text-align: center;
     color:white;
     border-radius: 50px;
     background-color: #6504B5;
@@ -81,4 +82,11 @@ form input {
 
 .botaoCadastro{
     margin-right: 15px;
+}
+
+nav{
+    color: white;
+    font-family: 'Lobster';
+    font-size: 36px;
+    line-height: 0px;
 }
