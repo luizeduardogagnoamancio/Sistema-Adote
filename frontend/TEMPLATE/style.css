@@ -40,6 +40,7 @@ header h2 {
 }
 
 
+
 nav{
     color: white;
     font-family: 'Lobster';
@@ -53,34 +54,3 @@ footer nav{
     font-size: 24px;
     line-height: 0px;
 }
-
-.feedback {
-    flex-direction: row;
-    margin-top: 10%;
-}
-
-
-form label {
-    font-family: 'Roboto Slab';
-    font-size: 30px;
-    color: #6504B5;
-    padding-left: 38%;
-    margin-bottom: 5%;
-}
-form textarea {
-    border-radius: 30px;
-    padding: 25px;
-    width: 500px;
-} 
-
-form input {
-    margin-bottom: 15px;
-    padding: 10px 0px 10px 5px;
-    font-family: 'Roboto Slab';
-    font-size: 100%;
-    border-radius: 7px;
-    width: 100%;
-    color: white;
-    background-color: #6504B5;
-}
-
