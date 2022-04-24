@@ -55,14 +55,45 @@ footer nav{
     line-height: 0px;
 }
 
-.confirmar {
-    box-sizing: border-box;
-    border-radius: 30px;
-    background: #6504B5;
-    margin-top: 5%;
-    height: 500px;
-    width: 500px;
-}
 .box-confirmar{
-    vertical-align: bottom;
+    border-radius: 5%;
+    border: solid;
+    border-color: #6504B5;
+    background: white;
+    width: 50rem;
+    height: 15rem;
+    padding: 30px 15px 15px 15px;
+    margin: 15rem 5rem 0rem 5rem;
+}
+.box-botoes{
+    margin-top: 8rem;
+    align-items: center;
+    display: flex;
+}
+
+button {
+    margin-bottom: 15px;
+    padding: 10px 0px 10px 5px;
+    font-family: 'Roboto Slab';
+    font-size: 100%;
+    border-radius: 7px;
+    width: 100%;
+    color: white;
+    background-color: #6504B5;
+}
+
+.box-mensagem{
+    text-align: center;
+}
+.texto-botao{
+    font-family: 'Lobster';
+}
+
+.texto-titulo {
+    font-size: 2rem;
+    font-style: bold;
+}
+
+.texto-mensagem{
+    font-size: 1.5rem;
 }
