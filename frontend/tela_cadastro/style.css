@@ -87,18 +87,18 @@ form input {
 
 .botaoCadastro{
     font-family: 'Lobster';
-	margin-top: 15px;
+	margin-top: 30px;
     width: 50%;
     font-size: 20px;
+    justify-content: center;
     padding: 10px 40px 10px 40px;
     color:white;
     border-radius: 50px;
     background-color: #6504B5;
 
 }
-
 .input-box{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 10px 0px 10px 0px;
     font-family: 'Roboto Slab';
     font-size: 100%;
