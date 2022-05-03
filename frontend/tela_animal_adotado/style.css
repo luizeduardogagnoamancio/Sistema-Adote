@@ -8,6 +8,9 @@ header {
     width: 100%;
 }
 
+.texto-botao {
+    color: white;
+}
 footer {
     position: absolute;
     width: 100%;

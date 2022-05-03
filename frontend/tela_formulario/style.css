@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.wrapper{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+header {
+    background-color: #6504B5;
+    display: flex;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    background-color: #6504B5;
+    color: blueviolet;
+    text-align: center;
+    margin: 0;
+    bottom: 0;
+}
+header img {
+    height: 60px;
+}
+
+.pata{
+    margin: 5px 5px 0px 5px;
+    filter: invert(100);
+}
+
+header h2 {
+    color: white;
+    font-family: 'Lobster';
+    font-size: 36px;
+    line-height: 12px;
+    text-align: center;
+}
+
+h2{
+    color: #6504B5;
+    font-family: 'Lobster';
+    font-size: 36px;
+    line-height: 12px;
+    text-align: center;
+}
+
+h3{
+    color: #6504B5;
+    font-family: 'Lobster';
+    font-size: 18px;
+    line-height: 12px;
+    margin-top: 35px;
+}
+
+form {
+    width: 100%;
+}
+
+
+/* form button {
+    font-family: 'Roboto Slab';
+    margin-top: 40px;
+    width: 50%;
+    font-size: 20px;
+    padding: 10px 40px 10px 40px;
+    
+    color:white;
+    border-radius: 50px;
+    background-color: #6504B5;
+} */
+
+
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px 0px 10px 0px;
+    font-family: 'Roboto Slab';
+    font-size: 100%;
+    border-radius: 7px;
+    width: 100%;
+    height: 30px;
+}
+
+.botaoCadastro{
+    font-family: 'Lobster';
+	margin-top: 15px;
+    width: 50%;
+    font-size: 20px;
+    padding: 10px 40px 10px 40px;
+    color:white;
+    border-radius: 50px;
+    background-color: #6504B5;
+
+}
+
+.input-box{
+    margin-bottom: 15px;
+    padding: 10px 0px 10px 0px;
+    font-family: 'Roboto Slab';
+    font-size: 100%;
+    border-radius: 7px;
+    width: 100%;
+    height: 30px;
+}
+
+.placeholder{
+    padding-left: 5px;
+}
+
+nav{
+    color: white;
+    font-family: 'Lobster';
+    font-size: 36px;
+    line-height: 0px;
+}
+footer nav{
+    color: white;
+    font-family: 'Lobster';
+    font-size: 24px;
+    line-height: 0px;
+}
+
+select {
+    background-color: #6504B5;
+    color: white;
+    border: 100rem #6504B5;
+    height: 2rem;
+    border-radius: 5rem;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 25%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+
+option{
+    text-align: center;
+    color: white;
+}
