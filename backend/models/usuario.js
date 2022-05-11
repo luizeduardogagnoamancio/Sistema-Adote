@@ -19,7 +19,27 @@ const UsuarioSchema = new mongoose.Schema({
         unique: true,
         require: true
     },
-    endereco: {
+    rua: {
+        type: String,
+        require: true
+    },
+    numero: {
+        type: Number,
+        require: true
+    },
+    bairro: {
+        type: String,
+        require: true
+    },
+    cidade: {
+        type: String,
+        require: true
+    },
+    uf: {
+        type: String,
+        require: true
+    },
+    cep: {
         type: String,
         require: true
     },

@@ -35,11 +35,16 @@ header h2 {
     text-align: center;
 }
 .content {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
 }
 
-
+.cachorro{
+    border-radius: 50px;
+    height: 40%;
+    width: 40%;
+    margin: 5% 0% 0% 5%;
+    border: 2px solid #ca97f5;
+}
 
 nav{
     color: white;
