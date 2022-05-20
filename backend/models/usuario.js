@@ -4,7 +4,7 @@ const UsuarioSchema = new mongoose.Schema({
     nome: {
         type: String,
         require: true
-    },
+    }/* ,
     telefone: {
         type: String,
         require: true
@@ -50,7 +50,7 @@ const UsuarioSchema = new mongoose.Schema({
     sexo: {
         type: String,
         require: true
-    }
+    } */
 
 })
 

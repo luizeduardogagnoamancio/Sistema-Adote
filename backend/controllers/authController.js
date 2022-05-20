@@ -13,4 +13,37 @@ router.post('/registro', async (req, res) => {
     }
 })
 
+router.get('/animais', async (req, res) => {
+    try {
+        console.log(req.body);
+        const usuario = await Usuario.create(req.body)
+
+        return res.send(usuario)
+    } catch (err) {
+        return res.status(400).send({ error: 'Erro de Cadastro' })
+    }
+})
+
+router.put('/animal', async (req, res) => {
+    try {
+        console.log(req.body);
+        const usuario = await Usuario.create(req.body)
+
+        return res.send(usuario)
+    } catch (err) {
+        return res.status(400).send({ error: 'Erro de Cadastro' })
+    }
+})
+
+router.delete('/animal', async (req, res) => {
+    try {
+        console.log(req.body);
+        const usuario = await Usuario.create(req.body)
+
+        return res.send(usuario)
+    } catch (err) {
+        return res.status(400).send({ error: 'Erro de Cadastro' })
+    }
+})
+
 module.exports = app => app.use('/auth', router)
