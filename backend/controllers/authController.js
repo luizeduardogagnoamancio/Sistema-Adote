@@ -5,23 +5,17 @@ const router = express.Router()
 router.post('/registro', async (req, res) => {
     try {
         console.log(req.body);
-        const usuario = await Usuario.create(req.body)
+        const usuario = await Usuario.create({nome : "Teste"})
 
-        return res.send(usuario)
+        return res.send({ usuario })
     } catch (err) {
         return res.status(400).send({ error: 'Erro de Cadastro' })
     }
 })
 
 router.get('/animais', async (req, res) => {
-    try {
-        console.log(req.body);
-        const usuario = await Usuario.create(req.body)
-
-        return res.send(usuario)
-    } catch (err) {
-        return res.status(400).send({ error: 'Erro de Cadastro' })
-    }
+    console.log("Entrou");
+    res.send("Teste")
 })
 
 router.put('/animal', async (req, res) => {
