@@ -8,7 +8,9 @@ router.get("/", async (req, res) => {
     const animais = await Animal.find();
     res.json(animais);
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({
+      message: err.message
+    });
   }
 });
 
@@ -17,9 +19,9 @@ router.get("/:id", getAnimal, async (req, res) => {
 });
 
 router.get('/filtro', async (req, res) => {
-    
+
   console.log("entrou")
-  let filtro = {}   
+  let filtro = {}
 
   if (req.body.porte) {
     filtro.porte = req.body.porte;
@@ -32,14 +34,18 @@ router.get('/filtro', async (req, res) => {
   }
   console.log(filtro);
   try {
-    const animais = await Animal.find(
-      { porte: filtro.porte || "" },
-      { raca: filtro.raca || "" },
-      { tipo: filtro.tipo || "" }
-    );
+    const animais = await Animal.find({
+      porte: filtro.porte || ""
+    }, {
+      raca: filtro.raca || ""
+    }, {
+      tipo: filtro.tipo || ""
+    });
     res.json(animais);
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({
+      message: err.message
+    });
   }
 });
 
@@ -54,31 +60,37 @@ router.post("/", async (req, res) => {
     const novoAnimal = await animal.save();
     res.status(201).json(novoAnimal);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({
+      message: err.message
+    });
   }
 });
 
 router.patch("/:id", getAnimal, async (req, res) => {
-  if (req.body.nome != null) {
-    res.animal.nome = req.body.nome;
+  const arr = Object.keys(req.body).map((key) => [key, req.body[key]]);
+  for (let atributo of arr) {
+    res.animal[atributo[0]] = atributo[1]
   }
-  /* if (req.body.nome != null) {
-        res.animal.nome = req.body.nome
-    } */
   try {
     const animalAtualizado = await res.animal.save();
     res.json(animalAtualizado);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({
+      message: err.message
+    });
   }
 });
 
 router.delete("/:id", getAnimal, async (req, res) => {
   try {
     await res.animal.remove();
-    res.json({ message: "Animal deletado" });
+    res.json({
+      message: "Animal deletado"
+    });
   } catch (error) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({
+      message: err.message
+    });
   }
 });
 
@@ -87,10 +99,14 @@ async function getAnimal(req, res, next) {
   try {
     animal = await Animal.findById(req.params.id);
     if (!animal) {
-      return res.status(404).json({ message: "Cannot find animal" });
+      return res.status(404).json({
+        message: "Cannot find animal"
+      });
     }
   } catch (err) {
-    return res.status(500).json({ message: err.message });
+    return res.status(500).json({
+      message: err.message
+    });
   }
   res.animal = animal;
   next();

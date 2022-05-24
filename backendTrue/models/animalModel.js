@@ -5,26 +5,26 @@ const animalSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    /* descricao: {
+    descricao: {
         type: String,
         require: true
     },
     idade: {
         type: Number,
         require: true
-    }, */
-    /* sexo: {
+    },
+    sexo: {
         type: String,
         require: true
-    }, */
+    },
     raca: {
         type: String,
         require: true
     },
-    /* vacina: {
+    vacina: {
         type: String,
         require: true
-    }, */
+    },
     porte: {
         type: String,
         require: true
@@ -32,7 +32,7 @@ const animalSchema = new mongoose.Schema({
     tipo: {
         type: String,
         require: true
-    } 
+    }
 
 })
 

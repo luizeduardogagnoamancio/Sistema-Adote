@@ -44,7 +44,7 @@ const usuarioSchema = new mongoose.Schema({
         require: true
     },
     data_nasc: {
-        type: Date,
+        type: String,
         require: true
     },
     sexo: {
