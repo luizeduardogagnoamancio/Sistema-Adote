@@ -72,7 +72,6 @@ router.delete("/:id", getUsuario, async (req, res) => {
 
 async function getUsuario(req, res, next) {
   let usuario;
-  console.log(req.params.id);
   try {
     usuario = await Usuario.findById(req.params.id);
     if (!usuario) {
