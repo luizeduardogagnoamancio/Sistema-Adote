@@ -95,9 +95,13 @@ form a {
 
 
 footer {
-    position: fixed;
+    position: absolute;
     height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
+    margin: 0;
     bottom: 0;
     background-color: #6504B5;
     color: blueviolet;
@@ -105,9 +109,9 @@ footer {
     line-height: 0;
 }
 
-
 ul {
     color: white;
+    line-height: 0;
     font-family: 'Lobster';
     font-size: 24px;
 }
