@@ -42,6 +42,25 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.post("/login", async (req, res) => {
+  const usuario = await Usuario.find({nome: req.body.nome})
+  if (usuario == null) {
+    return res.status(400).send('Cannot find User')
+  }
+  console.log(usuario);
+  try {
+    if (req.body.senha === usuario[0].senha) {
+      res.send('Success')
+    } else {
+      res.send('Not allowed')
+    }
+  } catch (err) {
+    res.status(400).json({
+      message: err.message
+    });
+  }
+});
+
 router.patch("/:id", getUsuario, async (req, res) => {
   const arr = Object.keys(req.body).map((key) => [key, req.body[key]]);
   for (let atributo of arr) {
