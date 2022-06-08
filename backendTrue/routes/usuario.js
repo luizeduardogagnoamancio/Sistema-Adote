@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Usuario = require("../models/usuarioModel");
+var sanitize = require('mongo-sanitize'); //verificar
 
 router.get("/", async (req, res) => {
   try {
@@ -43,16 +44,20 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const usuario = await Usuario.find({nome: req.body.nome})
+  let nomeSeguro = sanitize(req.body.nome);
+  let senhaSegura = sanitize(req.body.senha);
+  
+  console.log(`$nomeSeguro`);
+
+  const usuario = await Usuario.find({nome: nomeSeguro})
   if (usuario == null) {
     return res.status(400).send('Cannot find User')
   }
-  console.log(usuario);
   try {
-    if (req.body.senha === usuario[0].senha) {
-      res.send('Success')
+    if (senhaSegura === usuario[0].senha) {
+      res.send('Login efetuado com sucesso.')
     } else {
-      res.send('Not allowed')
+      res.send('Login ou senha Incorretos')
     }
   } catch (err) {
     res.status(400).json({
