@@ -52,9 +52,13 @@ router.get('/filtro', async (req, res) => {
 router.post("/", async (req, res) => {
   const animal = new Animal({
     nome: req.body.nome,
+    descricao : req.body.descricao,
+    idade : req.body.idade,
+    sexo : req.body.sexo,
     raca: req.body.raca,
-    tipo: req.body.tipo,
+    vacina : req.body.vacina,
     porte: req.body.porte,
+    tipo: req.body.tipo
   });
   try {
     const novoAnimal = await animal.save();

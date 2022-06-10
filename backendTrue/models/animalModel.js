@@ -14,23 +14,23 @@ const animalSchema = new mongoose.Schema({
         require: true
     },
     sexo: {
-        type: String,
+        type: Number,
         require: true
     },
     raca: {
-        type: String,
+        type: Boolean,
         require: true
     },
     vacina: {
-        type: String,
+        type: Boolean,
         require: true
     },
     porte: {
-        type: String,
+        type: Number,
         require: true
     },
     tipo: {
-        type: String,
+        type: Number,
         require: true
     }
 

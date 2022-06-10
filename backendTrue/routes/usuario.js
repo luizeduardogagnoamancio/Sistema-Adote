@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
   let nomeSeguro = sanitize(req.body.nome);
   let senhaSegura = sanitize(req.body.senha);
   
-  console.log(`$nomeSeguro`);
+  console.log(`${nomeSeguro}`);
 
   const usuario = await Usuario.find({nome: nomeSeguro})
   if (usuario == null) {
