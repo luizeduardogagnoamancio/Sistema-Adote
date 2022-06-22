@@ -66,7 +66,7 @@ footer {
 }
 
 
-.content {
+#content {
     position: relative;
     justify-content: center;
     align-items: center;
@@ -114,13 +114,6 @@ form a {
     background-color: #6504B5;
 }
 
-
-ul {
-    color: white;
-    line-height: 0;
-    font-family: 'Lobster';
-    font-size: 24px;
-}
 
 ul {
     color: white;

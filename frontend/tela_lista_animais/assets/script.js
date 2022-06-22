@@ -1,15 +1,3 @@
-/*
-Porte pequeno: 1
-Porte médio: 2
-Porte grande: 3
-
-Tem raça: 1
-Sem raça: 0
-
-Tipo cachorro: 1
-Tipo gato: 2
-Tipo outros: 3
-*/
 
 
 var ul = document.getElementsByClassName('list-container');
@@ -28,19 +16,27 @@ xhr.onload = function() {
 
       for(var element in data){
         var li = document.createElement("li");
-        li.innerHTML = `
-                        <a href="../tela_perfilAnimal/perfilAnimal.html">
-                        <div class="image-container">
-                            <img src="${data[element].image}">
-                        </div>
+        li.innerHTML = `<div class="image-container">
+                              <img src="${data[element].image}">
+                          </div>
 
-                        <div class="name-container"> 
-                            <span class="name">${data[element].nome}</span>
-                            <span class="description">${data[element].descricao}</span>
-                        </div>`
+                          <div class="name-container"> 
+                              <span class="name">${data[element].nome}</span>
+                              <span class="description">${data[element].descricao}</span>
+                          </div>`
+
+        li.addEventListener("click", sendData)
+
         li.className = "myList";
 
         ul[0].appendChild(li)
+
+
+
+        function sendData() {
+          localStorage.setItem("id", data[element]._id)
+          window.location.href = "../tela_perfilAnimal/perfilAnimal.html"
+        }
     }
 
     } else if (xhr.status === 404) {
@@ -62,4 +58,5 @@ xhr.onload = function() {
       console.log(`${e.loaded} B loaded!`)
     }
   }
+
 
